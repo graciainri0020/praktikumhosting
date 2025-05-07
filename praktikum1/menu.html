@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Coffeeshop Serenite</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .menu-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .menu-item {
+            border: 1px solid #ddd;
+            padding: 15px;
+            width: 30%;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .menu-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .order-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .order-section button {
+            background-color: #8B4513;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .order-section .quantity {
+            margin: 0 10px;
+            font-size: 16px;
+        }
+        .cart-button, .buy-button {
+            margin-top: 10px;
+            padding: 8px 15px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            display: block;
+        }
+        .cart-button {
+            background-color: #FFA500;
+        }
+        .buy-button {
+            background-color: #8B4513;
+        }
+    .menu-item1 {            border: 1px solid #ddd;
+            padding: 15px;
+            width: 30%;
+            text-align: center;
+            border-radius: 10px;
+}
+    .menu-item2 {            border: 1px solid #ddd;
+            padding: 15px;
+            width: 30%;
+            text-align: center;
+            border-radius: 10px;
+}
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Daftar Menu Coffeeshop Serenite</h1>
+</header>
+
+<main>
+    <section class="menu-category">
+        <h2>SIGNATURE</h2>
+        <div class="menu-container">
+            <div class="menu-item" data-name="Cappuccino" data-price="25000">
+                <img src="images/cappuccino.jpg" alt="Cappuccino">
+                <h3>CAPPUCINO</h3>
+                <p>Rp25.000 / Rp26.000 (HOT/ICE)</p>
+                <div class="order-section">
+                    <button onClick="decreaseQuantity(this)">-</button>
+                    <span class="quantity">0</span>
+                    <button onClick="increaseQuantity(this)">+</button>
+                </div>
+                <a href="#" class="cart-button" onClick="addToCart(this)">Tambah ke Keranjang</a>
+                <a href="#" class="buy-button" onClick="buyNow(this)">Pesan Sekarang</a>
+</div>
+
+            <div class="menu-item" data-name="Latte" data-price="25000"><img src="images/latte.jpg.jpeg" width="626" height="626">
+                <h3>LATTE</h3>
+                <p>Rp25.000 / Rp26.000 (HOT/ICE)</p>
+                <div class="order-section">
+                    <button onClick="decreaseQuantity(this)">-</button>
+                    <span class="quantity">0</span>
+                    <button onClick="increaseQuantity(this)">+</button>
+				</div>
+				<a href="#" class="cart-button" onClick="addToCart(this)">Tambah ke Keranjang</a>
+                <a href="#" class="buy-button" onClick="buyNow(this)">Pesan Sekarang</a>
+</div>
+				
+			<div class="menu-item" data-name="Latte" data-price="25000"><img src="images/americano.jpg.jpeg" width="275" height="183">
+                <h3>AMERICANO</h3>
+                <p>Rp25.000 / Rp26.000 (HOT/ICE)</p>
+                <div class="order-section">
+                    <button onClick="decreaseQuantity(this)">-</button>
+                    <span class="quantity">0</span>
+                    <button onClick="increaseQuantity(this)">+</button>
+				</div>
+				<a href="#" class="cart-button" onClick="addToCart(this)">Tambah ke Keranjang</a>
+                <a href="#" class="buy-button" onClick="buyNow(this)">Pesan Sekarang</a>
+</div>
+				
+			<div class="menu-item" data-name="Latte" data-price="25000"><img src="images/espresso.jpg.jpg" width="960" height="540">
+                <h3>EXPRESSO</h3>
+                <p>Rp25.000 / Rp26.000 (HOT/ICE)</p>
+                <div class="order-section">
+                    <button onClick="decreaseQuantity(this)">-</button>
+                    <span class="quantity">0</span>
+                    <button onClick="increaseQuantity(this)">+</button>
+				</div>
+				<a href="#" class="cart-button" onClick="addToCart(this)">Tambah ke Keranjang</a>
+                <a href="#" class="buy-button" onClick="buyNow(this)">Pesan Sekarang</a>
+</div>
+				
+			<div class="menu-item" data-name="Latte" data-price="25000"><img src="images/doppiocoffe.jpg.jpg" width="800" height="800">
+                <h3>DOPPIO COFFEE </h3>
+                <p>Rp25.000 / Rp26.000 (HOT/ICE)</p>
+                <div class="order-section">
+                    <button onClick="decreaseQuantity(this)">-</button>
+                    <span class="quantity">0</span>
+                    <button onClick="increaseQuantity(this)">+</button>
+				</div>
+				<a href="#" class="cart-button" onClick="addToCart(this)">Tambah ke Keranjang</a>
+                <a href="#" class="buy-button" onClick="buyNow(this)">Pesan Sekarang</a>
+</div>
+				
+			<div class="menu-item" data-name="Machiatto" data-price="25000"><img src="images/macchiato.jpg">
+			  <h3>MACHIATTO</h3>
+                    <p>Rp25.000 / Rp26.000 (HOT/ICE)</p>
+                    <div class="order-section">
+                      <button onClick="decreaseQuantity(this)">-</button>
+                        <span class="quantity">0</span>
+                      <button onClick="increaseQuantity(this)">+</button>
+				    </div>
+				    <a href="#" class="cart-button" onClick="addToCart(this)">Tambah ke Keranjang</a>
+			  <a href="#" class="buy-button" onClick="buyNow(this)">Pesan Sekarang</a>
+</div><div class="menu-item" data-name="Latte" data-price="25000"><img src="images/piccololatte.jpg.jpg">
+                <h3>PICOLLO LATTE</h3>
+                <p>Rp25.000 / Rp26.000 (HOT/ICE)</p>
+                <div class="order-section">
+                    <button onClick="decreaseQuantity(this)">-</button>
+                    <span class="quantity">0</span>
+                    <button onClick="increaseQuantity(this)">+</button>
+				</div>
+				<a href="#" class="cart-button" onClick="addToCart(this)">Tambah ke Keranjang</a>
+                <a href="#" class="buy-button" onClick="buyNow(this)">Pesan Sekarang</a>
+</div>
+    </section>
+
+    <section class="menu-category">
+        <h2>CLASSIC</h2>
+        <div class="menu-container">
+            <div class="menu-item" data-name="Kopi Tubruk" data-price="25000"><img src="images/kopitubruk.jpg.jpg" width="277" height="182">
+                <h3>KOPI TUBRUK</h3>
+                <p>Rp25.000 (HOT)</p>
+                <div class="order-section">
+                    <button onClick="decreaseQuantity(this)">-</button>
+                    <span class="quantity">0</span>
+                    <button onClick="increaseQuantity(this)">+</button>
+                </div>
+                <a href="#" class="cart-button" onClick="addToCart(this)">Tambah ke Keranjang</a>
+                <a href="#" class="buy-button" onClick="buyNow(this)">Pesan Sekarang</a>
+          </div>
+			
+			<div class="menu-item" data-name="Kopi Tubruk" data-price="25000"><img src="images/singleorigin.jpg.jpg" width="284" height="177">
+                <h3>SINGLE ORIGIN</h3>
+                <p>Rp25.000 (HOT)</p>
+                <div class="order-section">
+                    <button onClick="decreaseQuantity(this)">-</button>
+                    <span class="quantity">0</span>
+                    <button onClick="increaseQuantity(this)">+</button>
+                </div>
+                <a href="#" class="cart-button" onClick="addToCart(this)">Tambah ke Keranjang</a>
+                <a href="#" class="buy-button" onClick="buyNow(this)">Pesan Sekarang</a>
+          </div>
+			
+			<div class="menu-item" data-name="Kopi Tubruk" data-price="25000"><img src="images/viatnamesecoffe.jpg.jpg" width="201" height="251">
+                <h3>VIETNAMESE COFFE</h3>
+                <p>Rp25.000 (HOT)</p>
+                <div class="order-section">
+                    <button onClick="decreaseQuantity(this)">-</button>
+                    <span class="quantity">0</span>
+                    <button onClick="increaseQuantity(this)">+</button>
+                </div>
+                <a href="#" class="cart-button" onClick="addToCart(this)">Tambah ke Keranjang</a>
+                <a href="#" class="buy-button" onClick="buyNow(this)">Pesan Sekarang</a>
+          </div>
+			
+			<div class="menu-item" data-name="Kopi Tubruk" data-price="25000"><img src="images/kopasus(icekopipakesusu).jpg" width="1200" height="800">
+			  <h3>KOPASUS</h3>
+                <p>Rp25.000 (HOT)</p>
+                <div class="order-section">
+                    <button onClick="decreaseQuantity(this)">-</button>
+                    <span class="quantity">0</span>
+                    <button onClick="increaseQuantity(this)">+</button>
+                </div>
+                <a href="#" class="cart-button" onClick="addToCart(this)">Tambah ke Keranjang</a>
+                <a href="#" class="buy-button" onClick="buyNow(this)">Pesan Sekarang</a>
+          </div>
+        </div>
+    </section>
+	
+	<section class="menu-category">
+        <h2>FANCY</h2>
+        <div class="menu-container">
+            <div class="menu-item" data-name="Kopi Tubruk" data-price="25000"><img src="images/caramellatte.jpg.jpg" width="1200" height="1200">
+                <h3>CARAMEL LATTE</h3>
+                <p>Rp25.000 (HOT)</p>
+                <div class="order-section">
+                    <button onClick="decreaseQuantity(this)">-</button>
+                    <span class="quantity">0</span>
+                    <button onClick="increaseQuantity(this)">+</button>
+                </div>
+                <a href="#" class="cart-button" onClick="addToCart(this)">Tambah ke Keranjang</a>
+                <a href="#" class="buy-button" onClick="buyNow(this)">Pesan Sekarang</a>
+</div>
+			
+			<div class="menu-item" data-name="Kopi Tubruk" data-price="25000"><img src="images/vanillalatte.jpg.jpg" width="300" height="300">
+                <h3>VANILLA LATTE</h3>
+                <p>Rp25.000 (HOT)</p>
+                <div class="order-section">
+                    <button onClick="decreaseQuantity(this)">-</button>
+                    <span class="quantity">0</span>
+                    <button onClick="increaseQuantity(this)">+</button>
+                </div>
+                <a href="#" class="cart-button" onClick="addToCart(this)">Tambah ke Keranjang</a>
+                <a href="#" class="buy-button" onClick="buyNow(this)">Pesan Sekarang</a>
+</div>
+			
+			<div class="menu-item" data-name="Kopi Tubruk" data-price="25000"><img src="images/caramelmacchiato.jpg.jpg" width="1200" height="801">
+                <h3>CARAMEL MACHIATTO</h3>
+                <p>Rp25.000 (HOT)</p>
+                <div class="order-section">
+                    <button onClick="decreaseQuantity(this)">-</button>
+                    <span class="quantity">0</span>
+                    <button onClick="increaseQuantity(this)">+</button>
+                </div>
+                <a href="#" class="cart-button" onClick="addToCart(this)">Tambah ke Keranjang</a>
+                <a href="#" class="buy-button" onClick="buyNow(this)">Pesan Sekarang</a>
+</div>
+			
+			<div class="menu-item" data-name="Kopi Tubruk" data-price="25000"><img src="images/cofeelychee.jpg" width="201" height="251">
+                <h3>COFFEE LYCHEE</h3>
+                <p>Rp25.000 (HOT)</p>
+                <div class="order-section">
+                    <button onClick="decreaseQuantity(this)">-</button>
+                    <span class="quantity">0</span>
+                    <button onClick="increaseQuantity(this)">+</button>
+                </div>
+                <a href="#" class="cart-button" onClick="addToCart(this)">Tambah ke Keranjang</a>
+                <a href="#" class="buy-button" onClick="buyNow(this)">Pesan Sekarang</a>
+</div>
+			
+			<div class="menu-item" data-name="Kopi Tubruk" data-price="25000"><img src="images/cofeemocha.jpg" width="225" height="224">
+                <h3>COFEE MOCHA</h3>
+                <p>Rp25.000 (HOT)</p>
+                <div class="order-section">
+                    <button onClick="decreaseQuantity(this)">-</button>
+                    <span class="quantity">0</span>
+                    <button onClick="increaseQuantity(this)">+</button>
+                </div>
+                <a href="#" class="cart-button" onClick="addToCart(this)">Tambah ke Keranjang</a>
+                <a href="#" class="buy-button" onClick="buyNow(this)">Pesan Sekarang</a>
+</div>
+			
+			<div class="menu-item" data-name="Kopi Tubruk" data-price="25000"><img src="images/hazelnutlatte.jpg.jpg">
+                <h3>HAZELNUT LATTE</h3>
+                <p>Rp25.000 (HOT)</p>
+                <div class="order-section">
+                    <button onClick="decreaseQuantity(this)">-</button>
+                    <span class="quantity">0</span>
+                    <button onClick="increaseQuantity(this)">+</button>
+                </div>
+                <a href="#" class="cart-button" onClick="addToCart(this)">Tambah ke Keranjang</a>
+                <a href="#" class="buy-button" onClick="buyNow(this)">Pesan Sekarang</a>
+</div>
+			
+			<div class="menu-item" data-name="Kopi Tubruk" data-price="25000"><img src="images/avocadocoffee.jpg" width="1500" height="2000">
+                <h3>AVOCADO COFFEE</h3>
+                <p>Rp25.000 (HOT)</p>
+                <div class="order-section">
+                    <button onClick="decreaseQuantity(this)">-</button>
+                    <span class="quantity">0</span>
+                    <button onClick="increaseQuantity(this)">+</button>
+                </div>
+                <a href="#" class="cart-button" onClick="addToCart(this)">Tambah ke Keranjang</a>
+                <a href="#" class="buy-button" onClick="buyNow(this)">Pesan Sekarang</a>
+</div>
+			
+			<div class="menu-item" data-name="Kopi Tubruk" data-price="25000"><img src="images/affogatocoffe.jpg" width="193" height="261">
+                <h3>AFFOGATTO COFFEE</h3>
+                <p>Rp25.000 (HOT)</p>
+                <div class="order-section">
+                    <button onClick="decreaseQuantity(this)">-</button>
+                    <span class="quantity">0</span>
+                    <button onClick="increaseQuantity(this)">+</button>
+                </div>
+                <a href="#" class="cart-button" onClick="addToCart(this)">Tambah ke Keranjang</a>
+                <a href="#" class="buy-button" onClick="buyNow(this)">Pesan Sekarang</a>
+</div>
+			
+			<div class="menu-item" data-name="Kopi Tubruk" data-price="25000"><img src="images/cappucinocreambrulee.jpg" width="225" height="225">
+                <h3>CAPPUCINO CREAM BRULEE</h3>
+                <p>Rp25.000 (HOT)</p>
+                <div class="order-section">
+                    <button onClick="decreaseQuantity(this)">-</button>
+                    <span class="quantity">0</span>
+                    <button onClick="increaseQuantity(this)">+</button>
+                </div>
+                <a href="#" class="cart-button" onClick="addToCart(this)">Tambah ke Keranjang</a>
+                <a href="#" class="buy-button" onClick="buyNow(this)">Pesan Sekarang</a>
+</div>
+		</section>
+
+    <section class="menu-category">
+        <h2>NON COFFEE</h2>
+        <div class="menu-container">
+            <div class="menu-item" data-name="Taro Latte" data-price="30000"><img src="images/tarolatte.jpg.jpg" width="736" height="736">
+                <h3>TARO LATTE</h3>
+                <p>Rp30.000 / Rp35.000 (HOT/ICE)</p>
+                <div class="order-section">
+                    <button onClick="decreaseQuantity(this)">-</button>
+                    <span class="quantity">0</span>
+                    <button onClick="increaseQuantity(this)">+</button>
+                </div>
+                <a href="#" class="cart-button" onClick="addToCart(this)">Tambah ke Keranjang</a>
+                <a href="#" class="buy-button" onClick="buyNow(this)">Pesan Sekarang</a>
+          </div>
+			
+			<div class="menu-item" data-name="Taro Latte" data-price="30000"><img src="images/redvelvetlatte.jpg.jpg" width="1000" height="667">
+                <h3>REDVELVET LATTE</h3>
+                <p>Rp30.000 / Rp35.000 (HOT/ICE)</p>
+                <div class="order-section">
+                    <button onClick="decreaseQuantity(this)">-</button>
+                    <span class="quantity">0</span>
+                    <button onClick="increaseQuantity(this)">+</button>
+                </div>
+                <a href="#" class="cart-button" onClick="addToCart(this)">Tambah ke Keranjang</a>
+                <a href="#" class="buy-button" onClick="buyNow(this)">Pesan Sekarang</a>
+          </div>
+			
+			<div class="menu-item" data-name="Taro Latte" data-price="30000"><img src="images/chocolate.jpg.jpg" width="555" height="370">
+                <h3>CHOCOLATE</h3>
+                <p>Rp30.000 / Rp35.000 (HOT/ICE)</p>
+                <div class="order-section">
+                    <button onClick="decreaseQuantity(this)">-</button>
+                    <span class="quantity">0</span>
+                    <button onClick="increaseQuantity(this)">+</button>
+                </div>
+                <a href="#" class="cart-button" onClick="addToCart(this)">Tambah ke Keranjang</a>
+                <a href="#" class="buy-button" onClick="buyNow(this)">Pesan Sekarang</a>
+          </div>
+        </div>
+    </section>
+</main>
+
+<script>
+    function increaseQuantity(button) {
+        let quantitySpan = button.parentElement.querySelector(".quantity");
+        let currentQuantity = parseInt(quantitySpan.textContent);
+        quantitySpan.textContent = currentQuantity + 1;
+    }
+
+    function decreaseQuantity(button) {
+        let quantitySpan = button.parentElement.querySelector(".quantity");
+        let currentQuantity = parseInt(quantitySpan.textContent);
+        if (currentQuantity > 0) {
+            quantitySpan.textContent = currentQuantity - 1;
+        }
+    }
+
+    function addToCart(button) {
+        let menuItem = button.closest(".menu-item");
+        let itemName = menuItem.getAttribute("data-name");
+        let price = menuItem.getAttribute("data-price");
+        let quantity = menuItem.querySelector(".quantity").textContent;
+        alert(`✅ ${quantity}x ${itemName} ditambahkan ke keranjang!`);
+    }
+
+    function buyNow(button) {
+        let menuItem = button.closest(".menu-item");
+        let itemName = menuItem.getAttribute("data-name");
+        let price = menuItem.getAttribute("data-price");
+        let quantity = menuItem.querySelector(".quantity").textContent;
+        let total = price * quantity;
+        
+        let whatsappURL = `https://wa.me/6282352573491?text=Halo%20saya%20ingin%20memesan%20${quantity}x%20${itemName}%20(Rp${total})`;
+        window.location.href = whatsappURL;
+    }
+</script>
+
+</body>
+</html>
