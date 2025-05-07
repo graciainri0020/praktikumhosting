@@ -1,0 +1,20 @@
+﻿body {
+    background-color: #FFFFFF;
+}
+.style1 {
+    color: #000000;
+    font-weight: bold;
+}
+.style2 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+}
+.style3 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+.style4 {
+    font-size: 16px;
+    font-weight: bold;
+}
