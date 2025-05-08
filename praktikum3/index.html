@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Galeri Praktikum 3</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f0e6;
+      margin: 0;
+      padding: 0;
+      color: #4e342e;
+    }
+
+    header {
+      background-color: #a1887f;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .gallery-item {
+      background-color: #d7ccc8;
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery-item img {
+      width: 250px;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+    }
+
+    footer {
+      background-color: #a1887f;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Tugas Database CommandPrompt</h1>
+  </header>
+
+  <div class="gallery-container">
+    <div class="gallery-item">
+      <img src="cmdcoding.jpg" alt="CMD 1">
+    </div>
+    <!-- Tambah gambar lain kalau ada -->
+    <!-- <div class="gallery-item"><img src="gambar2.jpg" alt="CMD 2"></div> -->
+  </div>
+
+  <footer>
+    &copy; 2024 Praktikum Hosting - Gracia Inri Tabitha Kanaya Panjaitan
+  </footer>
+
+</body>
+</html>
